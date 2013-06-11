@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Silvergum::Application.config.secret_key_base = '7dfa3ee3a84f10a028765f111a0d92d7d79bccac63dc641a223b94773af40aae0a74487f114ce6ce0a3b27d70a369118c729047e2346f85e253cdc072a949e3b'
+Silvergum::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
