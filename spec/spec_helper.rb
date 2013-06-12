@@ -9,6 +9,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |file| require file }
 
 ActiveRecord::Migration.check_pending!
 
+require 'active_record_spec_helper'
+
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.order = 'random'
