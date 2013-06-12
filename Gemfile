@@ -2,14 +2,20 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
+# The important stuff:
 gem 'rails',   '4.0.0.rc1'
 gem 'pg',      '~> 0.15.1'
 gem 'unicorn', '~> 4.6.2'
 
+# Everything else, in alphabetical order when possible:
+gem 'coffee-rails', '~> 4.0.0'
+gem 'devise',
+  :git    => 'git://github.com/plataformatec/devise.git',
+  :branch => 'rails4',
+  :ref    => '6b5988d756'
+gem 'jquery-rails', '~> 3.0.1'
 gem 'sass-rails',   '~> 4.0.0.rc1'
 gem 'uglifier',     '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails', '~> 3.0.1'
 
 group :test do
   gem 'capybara',    '2.1.0'
