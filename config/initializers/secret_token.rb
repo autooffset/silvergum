@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Silvergum::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
+Silvergum::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'] ||
+  'test-token-that-should-be-replaced'
