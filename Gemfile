@@ -12,5 +12,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.0.1'
 
 group :test do
+  gem 'capybara',    '2.1.0'
   gem 'rspec-rails', '2.13.2'
 end
