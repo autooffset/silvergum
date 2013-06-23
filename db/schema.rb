@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130612112101) do
+ActiveRecord::Schema.define(version: 20130623150132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,5 +37,13 @@ ActiveRecord::Schema.define(version: 20130612112101) do
   add_index "customers", ["confirmation_token"], name: "index_customers_on_confirmation_token", unique: true, using: :btree
   add_index "customers", ["email"], name: "index_customers_on_email", unique: true, using: :btree
   add_index "customers", ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
+
+  create_table "providers", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "providers", ["name"], name: "index_providers_on_name", unique: true, using: :btree
 
 end
