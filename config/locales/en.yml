@@ -3,3 +3,10 @@ en:
     label:
       customer:
         password_confirmation: 'Confirm Password'
+      credential:
+        access_key_id: 'Access Key ID'
+        secret_access_key: 'Secret Access Key'
+  formtastic:
+    actions:
+      credential:
+        create: 'Save Credentials'
