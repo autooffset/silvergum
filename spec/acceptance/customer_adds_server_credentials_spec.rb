@@ -21,6 +21,6 @@ describe 'Customer adding server credentials' do
 
     visit my_account_path
 
-    page.should have_content('AWS 12345')
+    page.should have_content('Amazon Web Services 12345')
   end
 end
