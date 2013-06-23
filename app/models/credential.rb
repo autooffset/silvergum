@@ -6,4 +6,6 @@ class Credential < ActiveRecord::Base
   validates :provider,          presence: true
   validates :access_key_id,     presence: true
   validates :secret_access_key, presence: true
+
+  delegate :name, to: :provider, prefix: true
 end
