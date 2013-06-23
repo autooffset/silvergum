@@ -1,0 +1,11 @@
+<h2>My Account</h2>
+
+<h3>My Credentials</h3>
+
+<ul>
+  <% current_customer.credentials.each do |credential| %>
+  <li><%= credential.provider_name %> <%= credential.access_key_id %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add Credentials', [:new, :my, :credential] %>
