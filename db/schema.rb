@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130623150132) do
+ActiveRecord::Schema.define(version: 20130623150651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "credentials", force: true do |t|
+    t.integer  "customer_id",       null: false
+    t.integer  "provider_id",       null: false
+    t.string   "access_key_id",     null: false
+    t.string   "secret_access_key", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "credentials", ["customer_id"], name: "index_credentials_on_customer_id", using: :btree
+  add_index "credentials", ["provider_id"], name: "index_credentials_on_provider_id", using: :btree
 
   create_table "customers", force: true do |t|
     t.string   "email",                              null: false
