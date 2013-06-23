@@ -5,3 +5,7 @@ Customer.blueprint do
   password              { 'secret123' }
   password_confirmation { object.password }
 end
+
+Provider.blueprint do
+  name { "Provider #{sn}" }
+end

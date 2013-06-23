@@ -4,6 +4,8 @@ describe 'Customer adding server credentials' do
   let(:customer) { Customer.make! }
 
   before :each do
+    Provider.make! name: 'Amazon Web Services'
+
     sign_in_as customer
   end
 
