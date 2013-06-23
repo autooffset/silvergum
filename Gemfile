@@ -22,6 +22,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '2.1.0'
-  gem 'shoulda',  '3.5.0', require: false
+  gem 'capybara',  '2.1.0'
+  gem 'machinist', '2.0'
+  gem 'shoulda',   '3.5.0', require: false
 end
